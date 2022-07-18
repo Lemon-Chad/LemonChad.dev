@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/icon/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="/static/css/main.css"/>
+    <title>Home</title>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <main>
+        
+        <div class="title-container">
+            <h1 class="title">LemonChad</h1>
+        </div>
+
+        <div class="physics-outer">
+            <div class="physics-inner">
+                <div class="logo-container">
+                    <img src="/static/images/lemonchad.png" alt="My Awesome Logo" class="logo-shadow">
+                    <div class="logo-shadow-border"></div>
+                    <div class="logo-bounds">
+                        <img src="/static/images/logos/lemonchad.png" alt="My Awesome Logo" class="logo">
+                        <div class="logo-border"></div>  
+                    </div>
+                </div>
+                
+                <div class="panel-container panel1-container">
+                    <div class="panel panel1" tabindex="0">
+                        <img src="/static/images/textures/crystal3.png" alt="" class="crystalpanel">
+                        Python Developer
+                    </div>
+                </div>
+                <div class="panel-container panel2-container">
+                    <div class="panel panel2" tabindex="0">
+                        <img src="/static/images/textures/crystal3.png" alt="" class="crystalpanel">
+                        Java Developer
+                    </div>
+                </div>
+                <div class="panel-container panel3-container">
+                    <div class="panel panel3" tabindex="0">
+                        <img src="/static/images/textures/crystal3.png" alt="" class="crystalpanel">
+                        Web Developer
+                    </div>
+                </div>
+        
+                <p class="speaker">Feel free to click around! Just not... too much...</p>
+            </div>
+        </div>
+
+        <div class="title-container">
+            <h1 class="title">About Me</h1>
+        </div>
+
+        <div class="about-me">
+            <p>
+                I am a hobbyist developer with many years of experience 
+                and I work on unique projects like programming languages,
+                websites, and games in my free time.
+            </p>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', '/static/particles/particles.json', function() {
+            console.log('Particles loaded.');
+        });
+    </script>
+    <script src="/static/js/logoPhysics.js"></script>
+    <script src="/static/js/panelPhysics.js"></script>
+    
+</body>
+</html>

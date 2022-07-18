@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+body {
+    background-color: #11111f;
+    overflow-x: hidden;
+}
+
+.physics-outer {
+    overflow: hidden;
+    overscroll-behavior: none;
+    width: 100%;
+    height: 60vh;
+}
+
+.physics-inner {
+    position: absolute;
+    left: 0;
+    top: 20vh;
+    width: 100%;
+}
+
+:root {
+    font-size: 1vmin;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 200vh;
+    z-index: -5;
+    overflow: hidden;
+}
+
+main {
+    margin: 50px;
+    color: #eeeeef;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    text-align: center;
+    user-select: none;
+}
+
+.title-container {
+    display: block;
+}
+
+.title {
+    font-size: 5rem;
+    position: relative;
+    display: inline-block;
+    border-bottom: 0.5rem dashed #999;
+    z-index: 0;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.75rem;
+    bottom: -0.75rem;
+    left: 0;
+    transform: scaleX(0);
+    background: linear-gradient(90deg, rgb(154, 37, 208) 0%, rgb(57, 57, 208), 35%, rgb(0,212,255) 100%);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out, color 0.25s ease-out;
+    color: #eeeedf;
+}
+
+.title:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.panel-container {
+    position: relative;
+    text-align: flex;
+    display: block;
+    margin-bottom: 3rem;
+    z-index: 3;
+}
+
+.panel {
+    font-size: 3rem;
+    padding: 3rem;
+    background-color: rgba(23, 23, 43, 0.65);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 10px 10px 10px rgba(90, 90, 168, 0.2);
+    transition: 0.25s background-color ease-in-out, 
+        0.25s box-shadow ease-in-out;
+    display: inline-block;
+    position: relative;
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+}
+
+.panel:hover {
+    background-color: rgba(29, 29, 53, 0.8);
+    box-shadow: 10px 10px 30px rgba(110, 110, 204, 0.5);
+}
+
+.panel1-container, .panel2-container, .panel3-container {
+    display: inline-flex;
+    margin: 5rem;
+}
+
+.panel1, .panel2, .panel3 {
+    width: 30rem;
+}
+
+
+.button1:after {
+    position: absolute;
+    left: 38rem;
+    
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    
+    border: solid rgba(29, 29, 53, 0.8);
+    border-width: 0 0.8rem 0.8rem 0;
+    display: inline-block;
+    
+    transform: translateY(0.7rem) rotate(-45deg);
+
+    transition: 0.25s ease-in-out;
+}
+
+.button1:hover:after {
+    position: absolute;
+    left: 38rem;
+    
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    
+    border: solid rgba(65, 65, 119, 0.8);
+    border-width: 0 0.8rem 0.8rem 0;
+    display: inline-block;
+    
+    transform: translateY(-0.5rem) rotate(-45deg);
+}
+
+.logo-container {
+    position: relative;
+}
+
+.button1:focus:after {
+    position: absolute;
+    left: 50vw;
+    
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    
+    border: solid rgba(65, 65, 119, 0.8);
+    border-width: 0 0.8rem 0.8rem 0;
+    display: inline-block;
+    
+    transform: translateY(-0.5rem) rotate(-45deg);
+}
+
+.logo {
+    display: flex;
+    position: relative;
+    margin: auto;
+    max-width: 30rem;
+    cursor: pointer;
+}
+
+.logo-shadow {
+    display: flex;
+    margin: auto;
+    max-width: 30rem;
+    filter: brightness(0);
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    z-index: -7;
+}
+
+.logo-shadow-border {
+    display: flex;
+    margin: auto;
+    
+    width: 22rem;
+    height: 19.4rem;
+
+    border: solid #090911;
+    border-width: 0 0 0 3rem;
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 4.25rem) translateX(1.9rem);
+
+    z-index: -6;
+}
+
+.logo-bounds {
+    display: inline-block;
+}
+
+.crystalpanel {
+    overflow: hidden;
+    position: absolute;
+    object-fit: cover;
+    width:100%; 
+    height:100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: overlay;
+    border-radius: 10px;
+    opacity: 0.1;
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+
+.panel:hover > .crystalpanel {
+    opacity: 0.4;
+}
+
+.speaker {
+    font-size: 3rem;
+    color: rgb(198, 198, 198)
+}
+
+.about-me {
+    position: relative;
+    font-size: 3rem;
+    line-height: 6rem;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
